@@ -26,7 +26,7 @@ class reCaptcha {
         if (self::$apiUrl === null || self::$apiUrl === '')
             die('apiUrl can not be empty .');
 
-        if (!isset($defaultLanguage))
+        if (!isset($this->defaultLanguage))
             $this->defaultLanguage = 'en';
     }
 
