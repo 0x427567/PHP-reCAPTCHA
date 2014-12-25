@@ -53,9 +53,9 @@ class reCaptcha {
         echo '<script type="text/javascript" src="' . self::$apiUrl . '?hl=' . $this->defaultLanguage . '"></script>';
     }
 
-	/**
-	 * Detect user browser language
-	 */
+    /**
+     * Detect user browser language
+     */
     private function _detectUserLanguage() {
         $locale = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
         preg_match_all("/([a-z]{2})-?([a-z]{2})?/i", $locale, $languages);
@@ -66,13 +66,13 @@ class reCaptcha {
             $this->defaultLanguage = 'en';
     }
 
-	/**
-	 * Setting reCAPTCHA display language
-	 *
-	 * @param array $language User browser languages
-	 *
-	 * @return true or false
-	 */
+    /**
+     * Setting reCAPTCHA display language
+     *
+     * @param array $language User browser languages
+     *
+     * @return true or false
+     */
     private function _setLanguage(array $language) {
         if (!is_array($language)) {
             $this->defaultLanguage = 'en';
@@ -93,9 +93,9 @@ class reCaptcha {
         return true;
     }
 
-	/**
-	 * Google reCAPTCHA support languages
-	 */
+    /**
+     * Google reCAPTCHA support languages
+     */
     private function _generateLanguageList() {
         $this->supportLanguages = [
             'ar' => 1,
